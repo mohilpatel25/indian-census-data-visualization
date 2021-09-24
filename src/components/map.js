@@ -5,7 +5,6 @@ import { GeoJsonLayer } from "@deck.gl/layers";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { propertyMap } from "./properties.js";
-import { states } from "../assets/states.js";
 
 const CENTER = [23.878932, 77.502576];
 const INITIAL_VIEW_STATE = {
@@ -38,7 +37,7 @@ export default function Map() {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: states,
+      data: stateData,
       stroked: true,
       filled: true,
       pickable: true,
@@ -51,8 +50,7 @@ export default function Map() {
       onHover: ({ object }) => {
         const el = document.getElementById("info");
         if (object) {
-          el.innerHTML = `<hr>
-          <b>${object.properties.name}</b><br />
+          el.innerHTML = `<b>${object.properties.name}</b><br />
           Population: ${object.properties.population}<br />
           Density(per km<sup>2</sup>): ${object.properties.density}<br />
           Males: ${object.properties.males}<br />
@@ -61,11 +59,24 @@ export default function Map() {
           Urban: ${object.properties.urban}<br />
           Rural: ${object.properties.rural}<br />`;
         } else {
-          el.innerHTML = ``;
+          el.innerHTML = `Hover on state for details`;
         }
+      },
+      onClick: ({ object }) => {
+        console.log(object.properties[property]);
       }
     })
   ];
+
+  useEffect(() => {
+    async function get() {
+      const response = await axios.get(
+        "https://raw.githubusercontent.com/mohilpatel25/react/main/states.json"
+      );
+      setStateData(response.data);
+    }
+    get();
+  }, []);
 
   return (
     <DeckGL

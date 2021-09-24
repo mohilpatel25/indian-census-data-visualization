@@ -51,7 +51,7 @@ export default function Legend() {
           <i
             style={{ background: `rgb(${propertyMap["color"][i - 1]})` }}
             className={classes.i}
-          ></i>{" "}
+          ></i>
           {propertyMap[property][i]} &ndash; {propertyMap[property][i - 1]}
         </div>
       );

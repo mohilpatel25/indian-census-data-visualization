@@ -1,5 +1,5 @@
 import React from "react";
-import { FormGroup, FormControlLabel } from "@material-ui/core/";
+import { FormGroup, FormControlLabel } from "@material-ui/core";
 import Switch from "@material-ui/core/Switch";
 import { useDispatch } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
