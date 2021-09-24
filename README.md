@@ -1,6 +1,6 @@
 # Indian Census Data Visualization
 
-![](map.png)
+![](census-map.png)
 
 
 Web application that geographically maps census data such as popoulation, population density, sex ratio, etc.
