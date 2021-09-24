@@ -61,9 +61,6 @@ export default function Map() {
         } else {
           el.innerHTML = `Hover on state for details`;
         }
-      },
-      onClick: ({ object }) => {
-        console.log(object.properties[property]);
       }
     })
   ];
