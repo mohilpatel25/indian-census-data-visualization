@@ -3,8 +3,8 @@ import { StaticMap } from "react-map-gl";
 import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { useSelector } from "react-redux";
-import axios from "axios";
 import { propertyMap } from "./properties.js";
+import { states } from "../assets/states.js"
 
 const CENTER = [23.878932, 77.502576];
 const INITIAL_VIEW_STATE = {
@@ -25,7 +25,6 @@ const MAP_STYLE =
   "https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json";
 
 export default function Map() {
-  const [stateData, setStateData] = useState([]);
   const property = useSelector((state) => state.propertyStore.property);
 
   function getColor(d) {
@@ -37,7 +36,7 @@ export default function Map() {
   const layers = [
     new GeoJsonLayer({
       id: "geojson",
-      data: stateData,
+      data: states,
       stroked: true,
       filled: true,
       pickable: true,
@@ -64,16 +63,6 @@ export default function Map() {
       }
     })
   ];
-
-  useEffect(() => {
-    async function get() {
-      const response = await axios.get(
-        "https://raw.githubusercontent.com/mohilpatel25/react/main/states.json"
-      );
-      setStateData(response.data);
-    }
-    get();
-  }, []);
 
   return (
     <DeckGL
