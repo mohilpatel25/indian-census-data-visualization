@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.cfa2f6c4.chunk.js",
-    "main.js.map": "/static/js/main.cfa2f6c4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.63b268c3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.63b268c3.js.map",
-    "static/js/2.8bbb7871.chunk.js": "/static/js/2.8bbb7871.chunk.js",
-    "static/js/2.8bbb7871.chunk.js.map": "/static/js/2.8bbb7871.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.8bbb7871.chunk.js.LICENSE.txt": "/static/js/2.8bbb7871.chunk.js.LICENSE.txt"
+    "main.js": "/indian-census-data-visualization/static/js/main.cfa2f6c4.chunk.js",
+    "main.js.map": "/indian-census-data-visualization/static/js/main.cfa2f6c4.chunk.js.map",
+    "runtime-main.js": "/indian-census-data-visualization/static/js/runtime-main.01562914.js",
+    "runtime-main.js.map": "/indian-census-data-visualization/static/js/runtime-main.01562914.js.map",
+    "static/js/2.fb2a67f0.chunk.js": "/indian-census-data-visualization/static/js/2.fb2a67f0.chunk.js",
+    "static/js/2.fb2a67f0.chunk.js.map": "/indian-census-data-visualization/static/js/2.fb2a67f0.chunk.js.map",
+    "index.html": "/indian-census-data-visualization/index.html",
+    "static/js/2.fb2a67f0.chunk.js.LICENSE.txt": "/indian-census-data-visualization/static/js/2.fb2a67f0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.63b268c3.js",
-    "static/js/2.8bbb7871.chunk.js",
+    "static/js/runtime-main.01562914.js",
+    "static/js/2.fb2a67f0.chunk.js",
     "static/js/main.cfa2f6c4.chunk.js"
   ]
 }
