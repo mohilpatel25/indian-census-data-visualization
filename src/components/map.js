@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { StaticMap } from "react-map-gl";
 import DeckGL from "@deck.gl/react";
 import { GeoJsonLayer } from "@deck.gl/layers";
 import { useSelector } from "react-redux";
 import { propertyMap } from "./properties.js";
-import { states } from "../assets/states.js"
+import states from "../assets/states.json"
 
 const CENTER = [23.878932, 77.502576];
 const INITIAL_VIEW_STATE = {
